@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Demo: Verificar fortaleza de clave con jQuery</title>
+		<link rel="stylesheet" href="public/css/styles.css" />
+		<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+		<script src="public/js/script.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<h1>Registro de usuario</h1>
+			<form id="login" onsubmit="return checkform($('#pswd').val());">
+				<ul>
+					<li>
+						<label for="username">Nombres:</label>
+						<span><input id="username" name="username" type="text" /></span>
+					</li>
+					<li>
+						<label for="email">E-mail:</label>
+						<span><input id="email" name="email" type="text" /></span>
+					</li>
+					<li>
+						<label for="pswd">Clave:</label>
+						<span><input id="pswd" type="password" name="pswd" /></span>
+					</li>
+					<li>
+						<button type="submit">Register</button>
+					</li>
+				</ul>
+			</form>
+			
+			<div id="pswd_info">
+				<h4>Password must meet the following requirements:</h4>
+				<ul>
+					<li id="letter" class="invalid">At least <strong>one letter</strong></li>
+					<li id="capital" class="invalid">At least <strong>one capital letter</strong></li>
+					<li id="number" class="invalid">At least <strong>one number</strong></li>
+					<li id="length" class="invalid">Be at least <strong>8 characters</strong></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
